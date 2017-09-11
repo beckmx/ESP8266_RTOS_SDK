@@ -80,7 +80,7 @@ void esp_spiffs_deinit(uint8 format);
   *
   * @return spiffs
   */
-spiffs* esp_spiffs_current();
+spiffs esp_spiffs_current();
 
 /**
   * @}
