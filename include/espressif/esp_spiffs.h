@@ -74,6 +74,15 @@ sint32 esp_spiffs_init(struct esp_spiffs_config *config);
 void esp_spiffs_deinit(uint8 format);
 
 /**
+  * @brief  Get current working spiffs
+  *
+  * @param  none
+  *
+  * @return spiffs
+  */
+spiffs* esp_spiffs_current();
+
+/**
   * @}
   */
 

@@ -56,6 +56,10 @@ static s32_t esp_spiffs_readwrite(u32_t addr, u32_t size, u8_t *p, int write)
     return SPIFFS_OK;
 }
 
+static spiffs* esp_spiffs_current(){
+    return &fs;
+}
+
 static s32_t esp_spiffs_read(u32_t addr, u32_t size, u8_t *dst)
 {
     return esp_spiffs_readwrite(addr, size, dst, 0);
