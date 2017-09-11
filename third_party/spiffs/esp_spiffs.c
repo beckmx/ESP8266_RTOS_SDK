@@ -6,6 +6,7 @@
 #define NUM_SYS_FD 3
 
 static spiffs fs;
+spiffs* workingFS = &fs;
 
 static u8_t *spiffs_work_buf;
 static u8_t *spiffs_fd_buf;
@@ -56,9 +57,7 @@ static s32_t esp_spiffs_readwrite(u32_t addr, u32_t size, u8_t *p, int write)
     return SPIFFS_OK;
 }
 
-static spiffs esp_spiffs_current(){
-    return fs;
-}
+
 
 static s32_t esp_spiffs_read(u32_t addr, u32_t size, u8_t *dst)
 {
